@@ -1,0 +1,19 @@
+apiVersion : apps/v1
+kind: Deployment
+metadata:
+  name: theodatapipelinesjavascriptdocker 
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: theodatapipelinesjavascriptdocker
+  template:
+    metadata:
+      labels:
+        app: theodatapipelinesjavascriptdocker 
+    spec:
+      containers:
+        - name: theodatapipelinesjavascriptdocker 
+          image: aksacrtheo.azurecr.io/theodatapipelinesjavascriptdocker
+          ports:
+          - containerPort: 8080
